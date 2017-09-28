@@ -1,3 +1,5 @@
+package algorithm;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class AddOperator {
 
         public List<String> addOperators(String num, int target) {
             List<String> ans = new ArrayList<>();
-            if(num ==null | num.length()==0) {
+            if(num ==null | (num != null ? num.length() : 0) ==0) {
                 return ans;
             }
             dfs("",target,num,0,0,0,ans);
